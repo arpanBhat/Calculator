@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useReducer } from "react";
 import './styles.css'
+
+function reducer(state, action,{}){
+
+
+}
 
 
 const App=()=>{
+
+    const [state,dispatch]=useReducer(reducer);
 
     return (
         <div className="calc-grid">
