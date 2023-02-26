@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import './styles.css'
 
-function reducer(state,{}){
+function reducer(state, action,{}){
 
 
 }
