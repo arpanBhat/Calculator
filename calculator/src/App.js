@@ -1,7 +1,21 @@
 import React, { useReducer } from "react";
 import './styles.css'
 
-function reducer(state, action,{}){
+
+const ACTIONS={
+    ADD:"add",
+    SUBTRACT:"minus",
+    MULTI:"multiply",
+    DIVIDE:"divide",
+    RESULT:"ans",
+    CLEAR:"CLS",
+    DELETE:"del",
+    CHOOSE_OPERATOR:"choice"
+
+}
+
+
+function reducer({currNum,prevNum,operator}, {types,payloads}){
 
 
 }
@@ -9,18 +23,18 @@ function reducer(state, action,{}){
 
 const App=()=>{
 
-    const [state,dispatch]=useReducer(reducer);
+    const [{currNum,prevNum,operator},dispatch]=useReducer(reducer,{});
 
     return (
         <div className="calc-grid">
             <div className="output">
-            <div className="prev-operator"></div>
-            <div className="curr-operator"></div>
+            <div className="prev-operator">{prevNum} {operator}</div>
+            <div className="curr-operator">{currNum}</div>
             </div>
 
             <button className="span-two">AC</button>
             <button>DEL</button>
-            <button>/</button>
+            <button>÷</button>
             <button>1</button>
             <button>2</button>
             <button>3</button>
